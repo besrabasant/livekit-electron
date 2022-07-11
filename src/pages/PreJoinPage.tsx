@@ -1,4 +1,4 @@
-import { ErrorBoundary } from './ErrorBoundary'
+import { ErrorBoundary } from '../components/common/ErrorBoundary'
 import { faBolt } from '@fortawesome/free-solid-svg-icons';
 import { createLocalVideoTrack, LocalVideoTrack } from 'livekit-client';
 import { AudioSelectButton, ControlButton, VideoSelectButton } from '@livekit/react-components';
@@ -6,6 +6,7 @@ import { VideoRenderer } from '@livekit/react-core';
 import { ReactElement, useEffect, useState } from 'react';
 import { AspectRatio } from 'react-aspect-ratio';
 import { useNavigate } from 'react-router-dom';
+import { Header } from '../components/common/Header';
 
 export const PreJoinPage = () => {
   // state to pass onto room
@@ -125,8 +126,7 @@ export const PreJoinPage = () => {
   return (
     <div className="">
       <main>
-        <h2 className='text-2xl font-bold pt-3'>LiveKit Video</h2>
-        <hr className='my-3' />
+        <Header />
         <div className="flex flex-wrap items-center my-3">
           <div className='flex-1 flex items-center'>
             <div className="mr-3">LiveKit URL</div>
